@@ -1,0 +1,69 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Tables {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card ">
+          <div class="card-header">
+            <h4 class="card-title"> Simple Table</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table tablesorter " id="">
+                <thead class=" text-primary">
+                  <tr>
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                      Country
+                    </th>
+                    <th>
+                      City
+                    </th>
+                    <th class="text-center">
+                      Salary
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                   
+                    {% for x in ab %}
+                    print(ab)
+                  <tr>
+                    <td>
+                        {{ x.first_name }}
+                    </td>
+                    <td>
+                        {{ x.last_name }}
+                    </td>
+                    <td>
+                        {{ x.instrument }}
+                    </td>
+                    <td class="text-center">
+                      $98,615
+                    </td>
+                  </tr>
+
+                  {% endfor %} 
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
